@@ -1,0 +1,146 @@
+# Assignment 1.5 — GitHub Essentials II
+
+## Objective
+
+To upload a local project to GitHub, connect a local Git repository to a remote repository, and verify the commit history.
+
+## 1. Create a GitHub Account
+
+1. Open the official GitHub website: https://github.com/
+2. Create a new account or sign in to an existing account.
+3. Verify your email address if required.
+
+## 2. Create a New Public Repository
+
+1. Sign in to GitHub.
+2. Click the **+** icon and select **New repository**.
+3. Enter the repository name: `web-development-practice`.
+4. Select **Public**.
+5. Do not initialize the repository with a README file because the project already exists locally.
+6. Click **Create repository**.
+
+## 3. Open the Local Project Folder
+
+Open the terminal in the `web-development-practice` folder.
+
+```bash
+cd web-development-practice
+```
+
+Check the current repository status:
+
+```bash
+git status
+```
+
+## 4. Connect the Local Repository to GitHub
+
+Copy the HTTPS repository URL from your newly created GitHub repository.
+
+It will look similar to this:
+
+```text
+https://github.com/YOUR-USERNAME/web-development-practice.git
+```
+
+Replace `YOUR-USERNAME` with your actual GitHub username.
+
+Connect the local repository to GitHub:
+
+```bash
+git remote add origin https://github.com/YOUR-USERNAME/web-development-practice.git
+```
+
+Verify the remote connection:
+
+```bash
+git remote -v
+```
+
+## 5. Upload the Local Project to GitHub
+
+Rename the current branch to `main`:
+
+```bash
+git branch -M main
+```
+
+Upload the existing commits and project files:
+
+```bash
+git push -u origin main
+```
+
+If GitHub asks you to authenticate, complete the sign-in process.
+
+After the command succeeds, refresh your GitHub repository page to verify that the files are visible.
+
+## 6. Add a New File
+
+Create a new file named `about.html` in the project folder.
+
+Add the following code:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About My Project</title>
+</head>
+<body>
+    <h1>About My Project</h1>
+    <p>I am learning web development and GitHub.</p>
+</body>
+</html>
+```
+
+Save the file.
+
+## 7. Create the Second Commit and Push It
+
+Add the new file to Git's staging area:
+
+```bash
+git add about.html
+```
+
+Create a commit:
+
+```bash
+git commit -m "Add about page"
+```
+
+Push the new commit to GitHub:
+
+```bash
+git push
+```
+
+## 8. Verify the Commit History on GitHub
+
+1. Open your GitHub repository.
+2. Click the **Commits** link or the commit count shown above the file list.
+3. Verify that your previous commits and the new `Add about page` commit are visible.
+4. Confirm that `about.html` appears in the repository file list.
+
+You can also check the local commit history using:
+
+```bash
+git log --oneline
+```
+
+## 9. Submission
+
+Submit the public URL of your GitHub repository.
+
+Example:
+
+`https://github.com/YOUR-USERNAME/web-development-practice`
+
+Replace `YOUR-USERNAME` with your actual GitHub username.
+
+## Conclusion
+
+In this assignment, I created a public GitHub repository and connected it to my local Git repository. I uploaded my project files using `git push`, added a new HTML file, created another commit, and pushed the changes to GitHub. Finally, I verified the repository files and commit history online.
